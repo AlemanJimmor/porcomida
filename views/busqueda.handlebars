@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>PORCOMIDA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       	<!-- CSS -->
+       	<link rel="stylesheet" href="./stylesheets/normalize.css"/>
+        <link rel="stylesheet" href="./stylesheets/style.css"/>
+        <link rel='stylesheet' href='./stylesheets/leaflet.css'/>
+       
+        <!-- JS -->
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+        <script src='./javascripts/main.js'></script>
+        <script src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js'></script>
+        <script src='./javascripts/defiant.js'></script>
+        
+        
+        
+        <script src='http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur250tnu%2Cb2%3Do5-9w2x9r'></script>
+        <script src='http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-routing.js?key=Fmjtd%7Cluur250tnu%2Cb2%3Do5-9w2x9r'></script>
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
+
+	</head>
+
+	<body>
+	<div id="main">
+		<div id="logheader">Espacio login...</div>
+		<div id="header" >
+			<div id="logo">
+				<img src="./images/logo_azul.png">
+			</div>
+
+			<center id="dir">
+				<input id="pac-input" class="controls" type="text" placeholder="Escribe tu dirección" />
+				<button id="btnFindLC"> @</button>
+
+
+			</center>
+		</div>
+
+		<div id="search">
+			<div id="searchCont">
+
+				<div id="searchSub">
+					<input id="search-input" type="text" placeholder="Que se te antoja?">
+					<button id="btnFindNB">@</button>
+				</div>
+				
+				<div id="orden2">
+					<input id="chkPickup" type="checkbox" name="filter" value="pickup" checked="true">Recoger 
+					<input id="chkDelivery" type="checkbox" name="filter" value="delivery" checked="true">A Domicilio 
+					<input id="chkCredit" type="checkbox" name="filter" value="credit" checked="true">T. Credito 
+					<input id="chkOpen" type="checkbox" name="filter" value="open" checked="true">Abierto 
+					<input id="chkPromo" type="checkbox" name="filter" value="promo" checked="true">Promociones
+				</div>
+				<div id="orden">
+					<input id="radioRest" type="radio" name="per" value="restaurante" checked="true"><p>por Restaurante</p>
+					<input id="radioRest" type="radio" name="per" value="platillo"><p>por Platillo</p>
+				</div>			
+				<div id="def">
+					<p>En un radio de:</p>
+					<input id="rangeDistance" type="range" name="ratioD" min="1" max="10" step="1" value="3">
+					<p><center><span id="txtRatioDistance">3</span> km</p></center>
+				</div>
+				<div id="def2">
+					<p>Presupuesto:</p>
+					<input id="rangePrice" type="range" name="ratioP" min="0" max="350" step="1" value="150">
+					<p><center><span id="txtRatioPrice">$$</span></p></center>
+				</div>
+				<br><br>
+				<p>Dirección <span id="direc"></span></p>
+				<p>Coordenadas <span id="locationText"></span></p>
+			</div>
+		</div>
+
+		<div id="suggestions">
+			<br>
+
+			<center><p>No sabes que pedir ? Aqui algunas sugerencias.</p></center>
+				<table>
+					<tbody>
+					</tbody>
+				</table>
+		</div>
+		<div id="cuerpo">
+			<div id="filterResults">
+				Ordenar por: <button id="btnshowMenu" class="active" onclick="showNearBy()"><span>Distancia minima</span></button>
+				<button id="btnshowMenu" onclick="sortbyOrder()" value="" ><span>Orden minima</span></button>
+				<button id="btnshowMenu" onclick="sortbyRank()" value="" ><span>Calificacion</span></button>
+			</div>
+			<div id="userList">
+				<table id="tableResults">
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+
+			<div id="ubica">
+		</div>
+			
+		</div>
+		
+	</div>
+
+	<div id="control">
+      <strong>Start:</strong>
+      <select id="start" onchange="calcRoute();">
+        <option value="Cedros 405, Jardines de Celaya 2 Da Secc., 38080 Celaya, GTO, México">Celaya </option>
+        <option value="mexico, df">Mexico</option>
+      </select>
+      <strong>End:</strong>
+      <select id="end" onchange="calcRoute();">
+        <option value="queretaro, qro">Queretaro</option>
+        <option value="pachuca, hgo">Pachuca</option>
+      </select>
+    </div>
+    <div id="directions-panel"></div>
+	</body>
+</html>

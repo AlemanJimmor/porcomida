@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>porcomida</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       	<!-- CSS -->
+       	<link rel="stylesheet" href="../stylesheets/normalize.css"/>
+        <link rel="stylesheet" href="../stylesheets/style.css"/>
+        <link rel='stylesheet' href='../stylesheets/leaflet.css'/>
+       
+        <!-- JS -->
+        <script src="../socket.io/socket.io.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src='../javascripts/menus.js'></script>
+        <script src='../javascripts/defiant.js'></script>
+        
+        <script src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js'></script>
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+        <script src='http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur250tnu%2Cb2%3Do5-9w2x9r'></script>
+        <script src='http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-routing.js?key=Fmjtd%7Cluur250tnu%2Cb2%3Do5-9w2x9r'></script>
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
+
+	</head>
+
+	<body>
+	<div id="main">
+		<div id="headermenu" >
+			<div id="logomenu">
+				<img src="../images/logo_menu_header.png">
+			</div>
+			<div id="busquedamenu">
+				<input id="pac-input" class="controls" type="text" placeholder="Escribe tu dirección">
+				<button id="btnFindLC"> @</button>
+			</div>
+		</div>
+
+		<div id="headerTienda">
+			<div id="nameTienda">
+			<span>Nombre Tienda</span>
+				<div id="rankMenu">Rank : <a>s</a>
+				</div>
+				<div id="optionsMenu"> > ver opciones</div>
+			</div>
+			<div id="imageHeader">
+			</div>
+		</div>
+		<div id="imgTienda"><img src="../images/perfilcirculo.png"></div>
+		<div id="cuerpoMenu">
+			<div id="msjTienda">
+			<span>Mensaje Tienda </span>
+			</div>
+			<div id="descriptionTienda">
+			<span>Descripcion Tienda</span>
+			<a class="expander" href="#">click me</a>
+			<div class="content">
+				algo a esconder
+			</div>
+			</div>
+			<div id="orderMenu">Ordernar por: -Precio -Picante -Light -Vegetariano</div>
+			<div id="menuList">
+				<table id="tableResults">
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

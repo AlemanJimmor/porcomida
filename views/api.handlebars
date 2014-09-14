@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <title>PORCOMIDA</title>
+
+       	<!-- CSS -->
+       	<link rel="stylesheet" href="./stylesheets/normalize.css"/>
+        <link rel="stylesheet" href="./stylesheets/style.css"/>
+	</head>
+
+	<body>
+		<h1> GUIDE </h1>
+		<p> API VERSION ALPHA 2</p>
+		<h2> WORKING</h2>
+		<div id="List">
+			<table>
+				<thead>
+					<th> URL</th>
+					<th> METHOD</th>
+					<th> PARAMS</th>
+					<th> COMMENTS</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td> <a href='/busqueda'> /busqueda</td>
+						<td></td> 
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> <a href='/usuarios'> /usuarios</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+            </table>
+         </div>
+        // LIST
+        <div id="List">
+			<table>
+				<thead>
+					<th> URL</th>
+					<th> METHOD</th>
+					<th> PARAMS</th>
+					<th> COMMENTS</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td> SESSION</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> /user/session</td>
+						<td> POST</td>
+						<td></td>
+						<td> CHECK PERSISTANT SESSION</td>
+					</tr>
+					<tr>
+						<td> /user/login</td>
+						<td> POST</td>
+						<td> {username:STRING,password:STRING}</td>
+						<td> USER LOGIN</td>
+					</tr>
+					<tr>
+						<td> /user/logout</td>
+						<td> GET </td>
+						<td></td>
+						<td> USER LOGOUT</td>
+					</tr>
+					<tr>
+						<td> /user/pwdrecovery</td>
+						<td> POST</td>
+						<td> {email:STRING}</td>
+						<td> USER RECOVERY PASSWORD</td>
+					</tr>
+					<tr>
+						<td> USER</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> /user/</td>
+						<td> POST</td>
+						<td> {username:STRING,password:STRING}</td>
+						<td> CREATE</td>
+					</tr>
+					<tr>
+						<td> /user/:userId</td>
+						<td> PUT</td>
+						<td> {key:PROP,...}  </td>
+						<td> UPDATE</td>
+					</tr>
+					<tr>
+						<td> /user/:userId</td>
+						<td> GET</td>
+						<td></td>
+						<td> READ ALL DATA</td>
+					</tr>
+					<tr>
+						<td> /user/:userId/:param</td>
+						<td> GET </td>
+						<td></td>
+						<td> READ ONE PARAMETERL</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

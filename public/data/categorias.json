@@ -1,0 +1,49 @@
+
+	{
+		"ID" : "1",
+		"NOMBRE":"CHINA",
+		"COLOR" :"#000",
+		"IMG" : "img/CHINA.jpg"
+	}
+	{
+		"ID" : "2",
+		"NOMBRE":"MEXICANA",
+		"COLOR" :"#000",
+		"IMG" : "img/MEXICANA.jpg"
+	}
+	{
+		"ID" : "3",
+		"NOMBRE":"JAPONESA",
+		"COLOR" :"#000",
+		"IMG" : "img/JAPONESA.jpg"
+	}
+	{
+		"ID" : "4",
+		"NOMBRE":"POSTRES",
+		"COLOR" :"#000",
+		"IMG" : "img/POSTRES.jpg"
+	}
+	{
+		"ID" : "5",
+		"NOMBRE":"CANTONESA",
+		"COLOR" :"#000",
+		"IMG" : "img/CANTONESA.jpg"
+	}
+	{
+		"ID" : "6",
+		"NOMBRE":"ARABE",
+		"COLOR" :"#000",
+		"IMG" : "img/ARABE.jpg"
+	}
+	{
+		"ID" : "7",
+		"NOMBRE":"ITALIANA",
+		"COLOR" :"#000",
+		"IMG" : "img/ITALIANA.jpg"
+	}
+	{
+		"ID" : "8",
+		"NOMBRE":"RÁPIDA",
+		"COLOR" :"#000",
+		"IMG" : "img/RAPIDA.jpg"
+	}

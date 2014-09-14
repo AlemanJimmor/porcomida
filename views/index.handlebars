@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<html>
+    <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Displaying text directions with <code>setPanel()</code></title>
+    <script src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js'></script>
+    <link rel='stylesheet' href='./stylesheets/leaflet.css'/>
+    <link rel='stylesheet' href='./stylesheets/style.css'/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places'></script>
+    <script src='./javascripts/main.js'></script>
+  </head>
+	<body>
+		<div class="jumbotron text-center">
+		<h1><span class="fa fa-lock"></span> Node Authentication</h1>
+
+		<p>Login or Register with:</p>
+
+		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+		<a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a>
+		<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google+</a>
+	</div>
+	<div id="control">
+      <strong>Start:</strong>
+      <select id="start" onchange="calcRoute();">
+        <option value="Cedros 405, Jardines de Celaya 2 Da Secc., 38080 Celaya, GTO, México">Celaya </option>
+        <option value="mexico, df">Mexico</option>
+      </select>
+      <strong>End:</strong>
+      <select id="end" onchange="calcRoute();">
+        <option value="queretaro, qro">Queretaro</option>
+        <option value="pachuca, hgo">Pachuca</option>
+      </select>
+    </div>
+    <div id="directions-panel"></div>
+	</body>
+
+
+
+	</html>
